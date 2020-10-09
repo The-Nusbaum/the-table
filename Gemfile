@@ -40,7 +40,7 @@ gem 'omniauth'
 gem 'dotenv-rails'
 gem 'omniauth-google-oauth2'
 
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', github: 'cyu/rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
