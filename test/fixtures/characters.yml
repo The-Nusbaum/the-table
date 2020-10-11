@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  race: 
+  name: MyString
+
+two:
+  player: two
+  race: 
+  name: MyString

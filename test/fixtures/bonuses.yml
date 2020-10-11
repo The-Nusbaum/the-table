@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  parent: one
+  attribute: one
+  name: MyString
+  value: MyString
+
+two:
+  type: 
+  parent: two
+  attribute: two
+  name: MyString
+  value: MyString

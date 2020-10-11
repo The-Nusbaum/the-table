@@ -1,8 +1,30 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-Player.create([{thingy: 1}])
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
+Player.create([{thingy: 1, name: 'Me', user_id: 1}])
+camp = Campaign.create({user_id: 1, name:'Test Campaign'})
+play = Player.create({campaign_id: camp.id, user_id: 1})
+huma = Race.create({name: 'Human'})
+char = Character.create({player_id: play.id, race: huma.id})
+str = Attr.create({name: "Strength", abbr: "STR"})
+dex = Attr.create({name: "Dexterity", abbr: "DEX"})
+con = Attr.create({name: "Constitution", abbr: "CON"})
+wis = Attr.create({name: "Wisdom", abbr: "WIS"})
+int = Attr.create({name: "Intelligence", abbr: "INT"})
+cha = Attr.create({name: "Charisma", abbr: "cha"})
+CharacterAttr.create({character_id: char.id, attr_id: str.id, value: 10})
+CharacterAttr.create({character_id: char.id, attr_id: dex.id, value: 10})
+CharacterAttr.create({character_id: char.id, attr_id: con.id, value: 10})
+CharacterAttr.create({character_id: char.id, attr_id: wis.id, value: 10})
+CharacterAttr.create({character_id: char.id, attr_id: int.id, value: 10})
+CharacterAttr.create({character_id: char.id, attr_id: cha.id, value: 10})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:1, name:'Attr Improvement', value: 1})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:2, name:'Attr Improvement', value: 1})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:3, name:'Attr Improvement', value: 1})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:4, name:'Attr Improvement', value: 1})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:5, name:'Attr Improvement', value: 1})
+Bonus.create({object_type:'racial', object_id: huma.id, attr_id:6, name:'Attr Improvement', value: 1})
